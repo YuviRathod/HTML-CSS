@@ -1,1 +1,112 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f7fc;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+
+        .booking-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="booking-form">
+            <h2>Train Ticket Booking</h2>
+            <form action="traindb" method="POST">
+                <div class="form-group">
+                    <label for="from">From</label>
+                    <input type="text" class="form-control" id="from" placeholder="Enter departure station" required>
+                </div>
+                <div class="form-group">
+                    <label for="to">To</label>
+                    <input type="text" class="form-control" id="to" placeholder="Enter destination station" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Travel Date</label>
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="class">Class</label>
+                    <select class="form-control" id="class" required>
+                        <option value="">Select class</option>
+                        <option value="first">First Class</option>
+                        <option value="second">Second Class</option>
+                        <option value="sleeper">Sleeper Class</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="adults">Number of Adults</label>
+                    <input type="number" class="form-control" id="adults" placeholder="Enter number of adults" required>
+                </div>
+                <div class="form-group">
+                    <label for="children">Number of Children</label>
+                    <input type="number" class="form-control" id="children" placeholder="Enter number of children" >
+                </div>
+                <button type="submit" class="btn-submit">Book Ticket</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Train Ticket Booking System. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
